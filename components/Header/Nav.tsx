@@ -1,22 +1,21 @@
-import React from 'react'
-import Link from "next/link"
-import {Button} from "../ui/button"
+import React from 'react';
+import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className='flex gap-4 items-center'>
-    <Link href="#about">
-    <Button>About me</Button>
-  </Link>
-      <Link href="#skills">
-      <Button>Compétences</Button>
-    </Link>
-      <Link href="#projects">
-      <Button>Mes projets</Button>
-    </Link>
-      <Link href="#contact">
-      <Button>Contact</Button>
-    </Link>
+    <nav className="flex justify-center gap-6">
+      <Link href="#about" className="text-white hover:text-primary">
+        About
+      </Link>
+      <Link href="#skills" className="text-white hover:text-primary">
+        Skills
+      </Link>
+      <Link href="#projects" className="text-white hover:text-primary">
+        Projects
+      </Link>
+      <Link href="#contact" className="text-white hover:text-primary">
+        Contact
+      </Link>
     </nav>
-  )
+  );
 }

@@ -1,9 +1,14 @@
-import { PropsWithChildren } from "react";
+interface SectionProps {
+  id?: string;
+  children: React.ReactNode;
+  className?: string;
+}
 
-export const Section = (props: PropsWithChildren<{ className?: string }>) => {
+export default function Section({ id, children, className }: SectionProps) {
   return (
-    <section className={`max-w-6xl px-4 m-auto ${props.className || ""}`}>
-      {props.children}
+    <section id={id} className={`py-20 ${className}`}>
+      {children}
     </section>
   );
-};
+}
+
