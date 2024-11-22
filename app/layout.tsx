@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Hero from "@/components/main/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +32,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
+        {/* Render the Hero component */}
+        <Hero />
         {children}
       </body>
     </html>
   );
-  
 }
